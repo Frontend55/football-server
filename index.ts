@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/leagues', LeaguesRoutes);
 app.use('/calendar', CalendarRoutes);
 
-// job.start();
+job.start();
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

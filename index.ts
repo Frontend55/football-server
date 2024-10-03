@@ -9,7 +9,7 @@ import CalendarRoutes from './calendar/calendar.routes';
 const port = process.env.PORT || '3333';
 const app = express();
 
-database.sync();
+database.sync({ force: true });
 
 app.use(express.static('public'));
 app.use(express.json());

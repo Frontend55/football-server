@@ -1,0 +1,14 @@
+version: '3'
+services:
+  db:
+    image: postgres:14
+    container_name: 'dev'
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_HOST=dev'
+      - 'POSTGRES_USER=dev'
+      - 'POSTGRES_PASSWORD=123123'
+      - 'POSTGRES_DATABASE=dev'
+    command: postgres
+    restart: always

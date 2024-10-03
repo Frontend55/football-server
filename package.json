@@ -1,0 +1,24 @@
+{
+  "name": "sport-results-backend",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.ts",
+    "dev": "nodemon index.ts"
+  },
+  "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.37",
+    "cherio": "^1.0.0-rc.2",
+    "cors": "^2.8.5",
+    "cron": "^3.1.7",
+    "express": "^4.20.0",
+    "nodemon": "^3.1.4",
+    "pg-promise": "^11.9.1",
+    "postgresql": "^0.0.1",
+    "puppeteer": "^23.4.0",
+    "sequelize": "^6.37.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}

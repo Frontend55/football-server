@@ -9,7 +9,7 @@ import { parseTableFourthLeague, parseCalendarFourthLeague } from './parseFourth
 import { contentPageMain } from './parseMainPage';
 
 const sendDateServer = async ({ res, url }) => {
-  await fetch(`http://localhost:3333${url}`, {
+  await fetch(`https://app.xn----8sburvngh0h.xn--p1ai/${url}`, {
     headers: {
       "Content-Type": "application/json",
     },

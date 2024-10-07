@@ -9,6 +9,7 @@ import { parseTableFourthLeague, parseCalendarFourthLeague } from './parseFourth
 import { contentPageMain } from './parseMainPage';
 
 const sendDateServer = async ({ res, url }) => {
+  console.log(url);
   await fetch(`https://app.xn----8sburvngh0h.xn--p1ai/${url}`, {
     headers: {
       "Content-Type": "application/json",
@@ -21,42 +22,42 @@ const sendDateServer = async ({ res, url }) => {
 
 export const parseSiteInfo = async () => {
   await parseTableMajorLeague().then(res => {
-    sendDateServer({ res, url: '/leagues' });
+    sendDateServer({ res, url: 'leagues' });
   });
 
   await parseTableFirstLeague().then(res => {
-    sendDateServer({ res, url: '/leagues' });
+    sendDateServer({ res, url: 'leagues' });
   });
 
   await parseTableSecondLeague().then(res => {
-    sendDateServer({ res, url: '/leagues' });
+    sendDateServer({ res, url: 'leagues' });
   });
 
   await parseTableThirdLeague().then(res => {
-    sendDateServer({ res, url: '/leagues' });
+    sendDateServer({ res, url: 'leagues' });
   });
 
   await parseTableFourthLeague().then(res => {
-    sendDateServer({ res, url: '/leagues' });
+    sendDateServer({ res, url: 'leagues' });
   });
 
   await parseCalendarMajorhLeague().then(res => {
-    sendDateServer({ res, url: '/calendar' });
+    sendDateServer({ res, url: 'calendar' });
   });
 
   await parseCalendarFirstLeague().then(res => {
-    sendDateServer({ res, url: '/calendar' });
+    sendDateServer({ res, url: 'calendar' });
   })
 
   await parseCalendarSecondLeague().then(res => {
-    sendDateServer({ res, url: '/calendar' });
+    sendDateServer({ res, url: 'calendar' });
   })
 
   await parseCalendarThirdLeague().then(res => {
-    sendDateServer({ res, url: '/calendar' });
+    sendDateServer({ res, url: 'calendar' });
   })
 
   await parseCalendarFourthLeague().then(res => {
-    sendDateServer({ res, url: '/calendar?league=fourth' });
+    sendDateServer({ res, url: 'calendar' });
   })
 }

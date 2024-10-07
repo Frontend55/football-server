@@ -18,7 +18,7 @@ export const parseTableMajorLeague = async () => {
 
   return {
     url: 'major',
-    sordId: 1,
+    sortId: 1,
     ...table
   };
 }

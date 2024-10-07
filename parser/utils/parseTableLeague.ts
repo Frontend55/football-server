@@ -40,7 +40,7 @@ export const contentTableLeague = async (url) => {
         teamPoints,
       })
     });
-
+    console.log(teams);
     return { nameLeagues: $('.componentheading').text().trim(), teams };
   } catch (err) {
     if (err) {

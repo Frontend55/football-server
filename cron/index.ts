@@ -3,7 +3,7 @@ import { CronJob } from 'cron';
 import { parseSiteInfo } from '../parser/index';
 
 export const job = new CronJob(
-  '* * * * *', // cronTime
+  '20 * * * *', // cronTime
   async function () {
     await parseSiteInfo();
     console.log('Я спарсил!');

@@ -10,7 +10,7 @@ import { contentPageMain } from './parseMainPage';
 
 const sendDateServer = async ({ res, url }) => {
   try {
-    await fetch(`https://app.xn----8sburvngh0h.xn--p1ai${url}`, {
+    await fetch(`https://app.xn----8sburvngh0h.xn--p1ai/${url}`, {
       headers: {
         "Content-Type": "application/json",
       },

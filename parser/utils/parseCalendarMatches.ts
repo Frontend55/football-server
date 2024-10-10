@@ -4,7 +4,10 @@ import cherio from "cherio";
 export const contentCalendarLeague = async (url) => {
   try {
     const calendar = [];
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      executablePath: '/usr/bin/chromium-browser',
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     const page = await browser.newPage();
     await page.goto(url);
 

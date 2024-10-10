@@ -10,8 +10,6 @@ export const contentTableLeague = async (url) => {
     const content = await page.content();
     const $ = cherio.load(content);
 
-    $('.componentheading')
-
 
     $('.rankingtable  tr').each((i, element) => {
       if (i < 1) return;
@@ -40,8 +38,10 @@ export const contentTableLeague = async (url) => {
         teamPoints,
       })
     });
+    await browser.close();
     return { nameLeagues: $('.componentheading').text().trim(), teams };
   } catch (err) {
+    console.log(err);
     if (err) {
       contentTableLeague(url);
     }

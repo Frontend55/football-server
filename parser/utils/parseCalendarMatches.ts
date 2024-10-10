@@ -56,9 +56,10 @@ export const contentCalendarLeague = async (url) => {
         listMatches: matchesDay,
       });
     });
-
+    await browser.close();
     return calendar;
   } catch (err) {
+    console.log(err)
     if (err) {
       contentCalendarLeague(url);
     }

@@ -1,4 +1,6 @@
 
+import fetch from 'node-fetch';
+
 
 import { parseCalendarFirstLeague, parseTableFirstLeague } from './parseFirstLeague';
 import { parseTableMajorLeague, parseCalendarMajorhLeague } from './parserMajorLeague';
